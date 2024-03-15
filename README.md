@@ -4,7 +4,7 @@ Initialization: Sets up backtesting parameters, including start and end dates, c
 Selection Filter: Filters a universe of assets based on dollar volume and price, selecting the top 10 symbols.
 OnSecuritiesChanged: Liquidates positions for removed securities and sets holdings for newly added securities to 10% of the portfolio.
 
-Simple Trading Algo:
+Simple_Trading_Algo:
 
 Initialization: Sets up parameters for trading, such as start and end dates, cash allocation, and indicator settings.
 OnDataConsolidated: Consolidates minute data into 4-hour bars, calculates indicators, and generates buy/sell signals based on SMA and RSI conditions.
