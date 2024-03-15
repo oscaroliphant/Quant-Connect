@@ -1,9 +1,11 @@
-<span style="text-decoration: underline;">Top_10_Securities:</span>
+Top_10_Securities:
+
 Initialization: Sets up backtesting parameters, including start and end dates, cash allocation, and resolution.
 Selection Filter: Filters a universe of assets based on dollar volume and price, selecting the top 10 symbols.
 OnSecuritiesChanged: Liquidates positions for removed securities and sets holdings for newly added securities to 10% of the portfolio.
 
-<span style="text-decoration: underline;">Simple Trading Algo:</span>
+Simple Trading Algo:
+
 Initialization: Sets up parameters for trading, such as start and end dates, cash allocation, and indicator settings.
 OnDataConsolidated: Consolidates minute data into 4-hour bars, calculates indicators, and generates buy/sell signals based on SMA and RSI conditions.
 OnOrderEvent: Handles order events, although it's currently commented out in the code.
