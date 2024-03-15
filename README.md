@@ -1,9 +1,11 @@
-This Python code is designed for the QuantConnect platform, a tool for algorithmic trading. Here's a brief summary of what it does:
+<u>Top_10_Securities:</u>
+Initialization: Sets up backtesting parameters, including start and end dates, cash allocation, and resolution.
+Selection Filter: Filters a universe of assets based on dollar volume and price, selecting the top 10 symbols.
+OnSecuritiesChanged: Liquidates positions for removed securities and sets holdings for newly added securities to 10% of the portfolio.
 
-Initialization: The Initialize method sets the start and end dates for backtesting, allocates $100,000 in virtual cash, and defines the resolution for data (daily). It also adds a universe of assets based on a selection filter and allows for leverage of 2x, meaning positions can be twice the capital by borrowing from the broker, leading to increased gains but also increased risk.
+<u>Simple Trading Algo:</u>
+Initialization: Sets up parameters for trading, such as start and end dates, cash allocation, and indicator settings.
+OnDataConsolidated: Consolidates minute data into 4-hour bars, calculates indicators, and generates buy/sell signals based on SMA and RSI conditions.
+OnOrderEvent: Handles order events, although it's currently commented out in the code.
 
-Selection Filter: The SelectionFilter method filters a universe of assets based on their dollar volume and price. It sorts assets by dollar volume and selects those with a price greater than $50, returning the top 10 symbols.
-
-OnSecuritiesChanged: This method is called whenever there is a change in the securities universe. It liquidates positions for securities that are removed and not invested in the top 10, and it sets holdings for newly added securities to 10% of the portfolio.
-
-This code is designed for backtesting trading strategies on the QuantConnect platform, utilizing features like universe selection, leverage, and handling security changes.
+Note: This code is designed for backtesting trading strategies on the QuantConnect platform, utilizing features like universe selection, leverage, and handling security changes.
